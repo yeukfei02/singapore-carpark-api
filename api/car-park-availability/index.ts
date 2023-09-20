@@ -38,13 +38,13 @@ export enum LotType {
 }
 
 export interface CarParkAvailabilityRes {
-  carParkId: number;
+  carParkId: string;
   area: Area;
   development: string;
   latitude: number;
   longitude: number;
   availableLots: number;
-  lotType: LotType;
+  lotType: string;
   agency: Agency;
 }
 
@@ -60,6 +60,7 @@ export default async function (
   response.status(200).json({
     message: "car-park-availability",
     carParkAvailability: carParkAvailability,
+    count: carParkAvailability.length || 0,
   });
 }
 
@@ -77,14 +78,16 @@ const getCarParkAvailability = async () => {
         const latitude = location[0] ? parseFloat(location[0]) : 0;
         const longitude = location[1] ? parseFloat(location[1]) : 0;
 
+        const lotType = getLotType(item.LotType);
+
         const data = {
-          carParkId: parseInt(item.CarParkID, 10),
+          carParkId: item.CarParkID,
           area: item.Area,
           development: item.Development,
           latitude: latitude,
           longitude: longitude,
           availableLots: item.AvailableLots,
-          lotType: item.LotType,
+          lotType: lotType,
           agency: item.Agency,
         };
         return data;
@@ -93,4 +96,26 @@ const getCarParkAvailability = async () => {
   }
 
   return carParkAvailability;
+};
+
+const getLotType = (text: string) => {
+  let lotType = "";
+
+  if (text) {
+    switch (text) {
+      case "C":
+        lotType = "Cars";
+        break;
+      case "H":
+        lotType = "Heavy Vehicles";
+        break;
+      case "Y":
+        lotType = "Motorcycles";
+        break;
+      default:
+        break;
+    }
+  }
+
+  return lotType;
 };
