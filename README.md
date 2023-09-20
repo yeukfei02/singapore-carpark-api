@@ -21,6 +21,9 @@ $ vercel dev
 // deploy to vercel
 $ vercel deploy
 
+// deploy to vercel (production)
+$ vercel deploy --prod
+
 // use eslint and prettier to format code
 $ bun run lint
 ```
