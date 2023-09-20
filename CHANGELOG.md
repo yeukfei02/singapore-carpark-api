@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/yeukfei02/singapore-carpark-api/compare/v0.1.1...v0.1.2) (2023-09-20)
+
+
+### Bug Fixes
+
+* 🐛 add changelog.md ([2971357](https://github.com/yeukfei02/singapore-carpark-api/commit/297135752c3aacefe6278ad8f17f7d363cf9d9a3))
+* 🐛 fix readme.md ([4ea86fd](https://github.com/yeukfei02/singapore-carpark-api/commit/4ea86fd7cee83fd36a4d4d76838c77e7dc6f640c))
+* 🐛 update readme.md ([e2e5803](https://github.com/yeukfei02/singapore-carpark-api/commit/e2e5803354de0a97cd30c20d003ee7726c094991))
+
 ### 0.1.1 (2023-09-20)
 
 ### Features
