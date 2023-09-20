@@ -2,7 +2,7 @@
 
 singapore-carpark-api
 
-api url: <>
+api url: <https://singapore-carpark-aoaoblusr-yeukfei02.vercel.app>
 
 ## Requirement
 
