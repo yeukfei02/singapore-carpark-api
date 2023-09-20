@@ -11,7 +11,7 @@ export const getCarParkAvailability = async () => {
   let carParkAvailability: CarParkAvailabilityRes[] = [];
 
   const response = await axios.get(rootUrl, {
-    headers: { AccountKey: process.env.AccountKey },
+    headers: { AccountKey: process.env.ACCOUNT_KEY },
   });
   if (response) {
     const responseData: CarParkAvailability = response.data;
