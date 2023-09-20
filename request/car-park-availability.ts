@@ -22,7 +22,7 @@ export const getCarParkAvailability = async () => {
         const longitude = location[1] ? parseInt(location[1], 10) : 0;
 
         const data = {
-          carParkID: item.CarParkID,
+          carParkId: item.CarParkID,
           area: item.Area,
           development: item.Development,
           latitude: latitude,

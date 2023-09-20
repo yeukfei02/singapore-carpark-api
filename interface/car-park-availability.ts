@@ -35,7 +35,7 @@ export enum LotType {
 }
 
 export interface CarParkAvailabilityRes {
-  carParkID: string;
+  carParkId: string;
   area: Area;
   development: string;
   latitude: number;

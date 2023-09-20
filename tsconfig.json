@@ -5,6 +5,8 @@
     "target": "esnext",
     "moduleResolution": "node",
     "moduleDetection": "force",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "rootDir": ".",
     "noEmit": true,
     "composite": true,
